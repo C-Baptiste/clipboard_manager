@@ -12,8 +12,8 @@ class Window(QWidget):
 
         layout = QVBoxLayout()
 
-        for task in data["tasks"]:
-            button = Button(task["title"], task["content"])
+        for template in data["templates"]:
+            button = Button(template["title"], template["content"])
             button.clicked.connect(button.copy)
             layout.addWidget(button)
 
